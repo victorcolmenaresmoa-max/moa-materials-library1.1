@@ -1,0 +1,40 @@
+MOA MATERIALS LIBRARY — REDISEÑO PREMIUM
+
+Este ZIP contiene el repositorio completo listo para GitHub.
+
+PASO 1 — REEMPLAZAR EL FRONTEND
+1. Sube todos los archivos y carpetas del ZIP a tu repositorio.
+2. No subas node_modules ni dist (no están incluidos en el ZIP final).
+3. En Vercel conserva esta variable:
+   VITE_SHEET_API_URL = URL /exec de tu Google Apps Script
+
+PASO 2 — ACTUALIZAR GOOGLE APPS SCRIPT (OBLIGATORIO)
+1. Abre el Google Sheet conectado a la biblioteca.
+2. Ve a Extensiones > Apps Script.
+3. Reemplaza Code.gs completo por google-apps-script/Code.gs.
+4. Guarda.
+5. Ve a Implementar > Administrar implementaciones.
+6. Edita la implementación actual.
+7. Selecciona Nueva versión y pulsa Implementar.
+8. Confirma que VITE_SHEET_API_URL en Vercel use la URL /exec correcta.
+
+IMPORTANTE
+- El nuevo Code.gs añade automáticamente la columna "actualizado" si no existe.
+- No borres ni reordenes las columnas existentes del Sheet.
+- Al eliminar una ficha desde la app, el archivo original permanece seguro en Google Drive.
+- Los favoritos, recientes, vista y orden se guardan en el navegador de cada usuario.
+- Límite de carga directa: 20 MB por archivo.
+
+FUNCIONES NUEVAS
+- Biblioteca con búsqueda global y atajo Ctrl/Cmd + K.
+- Filtros avanzados por tipo, nivel, competencia, grado, edad y tema.
+- Ordenamiento y vistas de tarjetas/lista.
+- Favoritos y recursos recientes.
+- Panel de insights académicos.
+- Vista detallada de cada recurso.
+- Crear, editar, duplicar, copiar enlace y eliminar recursos.
+- Selección múltiple y eliminación en lote.
+- Exportación CSV de los resultados visibles.
+- Carga a Google Drive por archivo, arrastrar/soltar, pegar o URL directa.
+- Borrador automático del formulario.
+- Diseño responsive MOA Premium.

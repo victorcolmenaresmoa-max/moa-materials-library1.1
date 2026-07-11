@@ -1,0 +1,18 @@
+CORRECCIÓN DEL DEPLOY EN VERCEL
+
+El package-lock.json anterior contenía enlaces "resolved" hacia un registro npm interno no accesible desde Vercel. Eso hacía que "npm install" esperara varios minutos y terminara con código 1.
+
+Esta versión:
+- elimina el package-lock.json defectuoso;
+- incluye .npmrc apuntando al registro público oficial de npm;
+- fija una versión compatible de Node.js en package.json;
+- conserva el diseño y las funciones de MOA Materials Library.
+
+Configuración recomendada en Vercel:
+Framework Preset: Vite
+Build Command: npm run build
+Output Directory: dist
+Install Command: npm install
+Root Directory: dejar vacío si package.json está en la raíz del repositorio.
+
+Después de reemplazar los archivos, crea un nuevo commit y pulsa Redeploy sin usar la caché anterior.
